@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap/css.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/flat-ui.css" />
+        <title>Mad Ballots</title>
+    </head>
+    <body>
+        <script id="home-tmpl" type="text/x-handlebars-template">
+            <div class='navbar navbar-inverse navbar-static-top'>
+                <div class='navbar-inner'>
+                    <div class='container'>
+                        <a type='button' class='btn fui-list' data-toggle='collapse' data-target='.nav-collapse'>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <div class='nav-collapse collapse'>
+                            <ul class="nav">
+                                <li><a href='#'>New Game</a></li>
+                                <li><a href='#'>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script id="newgame-tmpl" type="text/x-handlebars-template">
+            <div class='container-fluid'>
+                <div class='row-fluid'>
+                    <div class='span12'>
+                        <span class='lead'>New Game</span></br>
+                        <input id='newGameName' type='text' placeholder='Name' class='input-block-level'>
+                        <div class='control-group'>
+                            <label class='control-label' for='newGameRounds'>Number of Rounds</label>
+                            <div class='controls'><input type='number' id='newGameRounds' value='20'></div>
+                        </div>
+                        <div class='input-append'>
+                            <input id='newGameInvitee' type='text' placeholder='Invite Friends'>
+                            <button id='newGameInviteButton' type='btn' class='button'>Invite!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script id="login-tmpl" type="text/x-handlebars-template">
+            <div data-role='page'>
+                <div data-role='content' role='main'>
+                    <h4>Already have an account?</h4>
+                    <form id='loginForm' name='user'>
+                        <input id='loginEmail' type='email' placeholder='Email Address' class='input-block-level'>
+                        <input id='loginPassword' type='password' placeholder='Password'class='input-block-level'>
+                        <input type='submit' class='btn btn-block btn-primary' value='Log In'>
+                    </form>
+                </div>
+            </div>
+            
+            <div class='container-fluid'>
+                <div class='row-fluid'>
+                    <div class='span12'>
+                        <span class='lead'>Already have an account?</span></br>
+                        <form id='loginForm' name='user'>
+                            <input id='loginEmail' type='email' placeholder='Email Address'>
+                            <input id='loginPassword' type='password' placeholder='Password'>
+                            <input type='submit' data-icon='flat-settings' value='Log In'>
+                        </form>
+                    </div>
+                </div>
+                <div class='row-fluid'>
+                    <span class='lead'>Not Signed Up Yet?</span></br>
+                    <button class='btn btn-block btn-info' id='loginSignupBtn'>Create an Account</button>
+                </div>
+            </div>
+        </script>
+        <script id="signup-tmpl" type="text/x-handlebars-template">
+            <div class='container-fluid'>
+                <div class='row-fluid'>
+                    <div class='span12'>
+                        <span class='lead'>Sign up</span></br>
+                        <form id='signupForm'>
+                            <input id='signupFirstName' type='text' placeholder='First name' class='input-block-level'>
+                            <input id='signupLastName' type='text' placeholder='Last name' class='input-block-level'>
+                            <input id='signupEmail' type='email' placeholder='Email Address' class='input-block-level'>
+                            <input id='signupPassword' type='password' placeholder='Password' class='input-block-level'>
+                            <input id='signupPasswordConfirmation' type='password' placeholder='Password Confirmation' class='input-block-level'>
+                            <input type='submit' value='Create Account' class='btn btn-block btn-primary'>
+                        </form>
+                    </div>
+                </div>
+                <div class='row-fluid'>
+                    <button class='btn btn-block btn-danger' id='signupCancelBtn'>Cancel</button>
+                </div>
+            </div>
+        </script>
+        <script type="text/javascript" src="lib/js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="lib/js/handlebars.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="cordova-2.7.0.js"></script>
+        <script type="text/javascript" src="js/APIRequester.js"></script>
+        <script type="text/javascript" src="js/HomeView.js"></script>
+        <script type="text/javascript" src="js/LoginView.js"></script>
+        <script type="text/javascript" src="js/SignupView.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
